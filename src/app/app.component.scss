@@ -1,0 +1,47 @@
+/* Banner Section */
+.banner {
+  margin: 0;          /* removes default margin */
+  padding: 0;         /* removes default padding */
+}
+
+.banner img {
+  display: block;     /* removes inline spacing */
+  width: 100%;        /* scales image to full width */
+  height: auto;       /* keeps aspect ratio */
+  margin: 0;          /* removes gap below image */
+  max-width: 100%;    /* prevents overflow */
+}
+
+/* Moving Appointment Text */
+.appointment-marquee {
+  width: 100%;
+  overflow: hidden;
+  background: #000;          /* black background for contrast */
+  color: #fff;               /* white text */
+  padding: 10px 0;
+  text-align: center;
+}
+
+.appointment-marquee p {
+  display: inline-block;
+  white-space: nowrap;
+  animation: scroll-text 10s linear infinite;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+@keyframes scroll-text {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+/* Mobile Optimization */
+@media (max-width: 768px) {
+  .banner img {
+    max-height: 40vh;   /* limits height on mobile */
+  }
+}

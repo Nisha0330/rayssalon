@@ -1,0 +1,59 @@
+/* Custom black toolbar */
+.custom-toolbar {
+  background-color: #000 !important; /* black background */
+  color: #fff !important;            /* white text */
+  display: flex;
+  align-items: center;
+}
+
+/* Brand styling */
+.brand {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+/* Spacer pushes nav to the right */
+.spacer {
+  flex: 1 1 auto;
+}
+
+/* Navigation links */
+nav a {
+  color: #fff !important;
+  font-weight: 500;
+  margin: 0 8px;
+}
+
+/* Mobile menu button hidden on desktop */
+.mobile-menu {
+  display: none;
+}
+
+/* Responsive behavior */
+@media (max-width: 768px) {
+  .mobile-menu {
+    display: inline-flex;
+    margin-right: 10px;
+  }
+
+  nav {
+    display: none;
+    flex-direction: column;
+    background: #111;
+    position: absolute;
+    top: 64px; /* below toolbar */
+    left: 0;
+    width: 100%;
+    padding: 10px 0;
+  }
+
+  nav.open {
+    display: flex;
+  }
+
+  nav a {
+    margin: 10px 0;
+    text-align: center;
+  }
+}

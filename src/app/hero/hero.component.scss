@@ -1,0 +1,77 @@
+.hero {
+  text-align: center;
+  padding: 40px 20px;
+  background: #f9f9f9;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  margin: 8px 0;
+}
+
+/* Announcement Banner */
+.hero-notification {
+  margin: 20px auto;
+  max-width: 700px;
+  background: #000; /* black background */
+  color: #fff;
+  border-radius: 6px;
+  overflow: hidden;
+  padding: 10px;
+}
+
+.hero-notification mat-card-content {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.announcement-text {
+  display: inline-block;
+  white-space: nowrap;
+  animation: ticker 12s linear infinite;
+  font-size: 1.6rem; /* larger text */
+  font-weight: bold;
+}
+
+@keyframes ticker {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+/* Hero buttons */
+.hero-buttons {
+  margin-top: 25px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+}
+
+.hero-buttons button {
+  min-width: 160px;
+}
+
+/* Mobile adjustments */
+@media (max-width: 768px) {
+  .hero p {
+    font-size: 1rem;
+  }
+
+  .announcement-text {
+    font-size: 1.3rem; /* slightly smaller for mobile */
+  }
+
+  .hero-buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .hero-buttons button {
+    width: 85%;
+  }
+}

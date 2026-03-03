@@ -1,0 +1,17 @@
+<mat-toolbar class="custom-toolbar">
+  <!-- Hamburger menu for mobile -->
+  <button mat-icon-button (click)="toggleMenu()" class="mobile-menu">
+    <mat-icon>menu</mat-icon>
+  </button>
+
+  <span class="brand">Ray's Hair Extensions Studio</span>
+  <span class="spacer"></span>
+
+  <!-- Navigation -->
+  <nav [class.open]="menuOpen">
+    <a mat-button (click)="scrollTo('home')">Home</a>
+    <a mat-button (click)="scrollTo('services')">Services</a>
+    <a mat-button (click)="scrollTo('gallery')">Gallery</a>
+    <a mat-button (click)="scrollTo('contact')">Contact</a>
+  </nav>
+</mat-toolbar>

@@ -1,0 +1,23 @@
+.footer {
+  background: #000;          /* black background */
+  color: #fff;               /* white text */
+  text-align: center;
+  padding: 20px;
+  font-family: 'Poppins', sans-serif; /* modern font */
+}
+
+.footer p {
+  margin: 5px 0;
+  font-size: 1rem;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .footer {
+    padding: 15px;
+  }
+
+  .footer p {
+    font-size: 0.9rem; /* slightly smaller on mobile */
+  }
+}
